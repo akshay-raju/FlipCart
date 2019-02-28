@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>login-signup</title>
+<link rel="stylesheet" href="styles.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$(".login-form").hide();
+		$(".login").css("background", "none");
+
+		$(".login").click(function() {
+			$(".signup-form").hide();
+			$(".login-form").show();
+			$(".signup").css("background", "none");
+			$(".login").css("background", "#fff");
+		});
+
+		$(".signup").click(function() {
+			$(".signup-form").show();
+			$(".login-form").hide();
+			$(".login").css("background", "none");
+			$(".signup").css("background", "#fff");
+		});
+
+		$(".btn").click(function() {
+			$(".input").val("");
+		});
+
+	});
+</script>
+
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="container">
+
+			<div class="signup">Sign Up</div>
+			<div class="login">Log In</div>
+
+			<div class="signup-form">
+				<form action="Registration" method="post">
+					<input type="text" placeholder="Your Email Address" class="abc" name="email"><br /> 
+						<input type="text" placeholder="Choose a Username" class="abc" name="username"><br />
+					<input type="password" placeholder="Choose a Password" class="abc" name="password"><br />
+
+					<div>
+						<input type="submit" value="SignUp" class="btn">
+					</div>
+				</form>
+
+			</div>
+
+			<div class="login-form">
+				<form action="LoginServlet" method="post">
+					<input type="text" placeholder="Username" class="abc"
+						name="username"><br /> <input type="password" placeholder="Password" class="abc" name="password"><br />
+					<div>
+						<input type="submit" value="LogIn" class="btn">
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
